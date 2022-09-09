@@ -4,13 +4,19 @@ import Card from '../components/Card.astro'
 ---
 
 <Layout title="Welcome to Astro.">
-  <main>
-    <h1>Welcome to <span class="text-gradient">Astro</span></h1>
-    <p class="instructions">
-      Check out the <code>src/pages</code> directory to get started.<br />
+  <main class="m-auto max-w-prose p-4 text-base text-gray-900">
+    <h1 class="my-8 mx-0 text-6xl">
+      Welcome to <span
+        class="bg-gradient-to-t from-indigo-600 to-fuchsia-500 bg-clip-text font-bold text-transparent"
+        >Astro</span
+      >
+    </h1>
+    <p class="my-4 mx-0 rounded-md bg-indigo-600 p-4 leading-6 text-stone-200">
+      Check out the <code class="rounded-md border-2 border-stone-300 py-0.5 px-1 text-sm">src/pages</code> directory
+      to get started.<br />
       <strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
     </p>
-    <ul role="list" class="link-card-grid">
+    <ul role="list" class="grid grid-cols-2 gap-4 p-0">
       <Card
         href="https://docs.astro.build/"
         title="Documentation"
@@ -34,63 +40,3 @@ import Card from '../components/Card.astro'
     </ul>
   </main>
 </Layout>
-
-<style>
-  :root {
-    --astro-gradient: linear-gradient(0deg, #4f39fa, #da62c4);
-  }
-
-  h1 {
-    margin: 2rem 0;
-  }
-
-  main {
-    margin: auto;
-    padding: 1em;
-    max-width: 60ch;
-  }
-
-  .text-gradient {
-    font-weight: 900;
-    background-image: var(--astro-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 100% 200%;
-    background-position-y: 100%;
-    border-radius: 0.4rem;
-    animation: pulse 4s ease-in-out infinite;
-  }
-
-  @keyframes pulse {
-    0%,
-    100% {
-      background-position-y: 0%;
-    }
-    50% {
-      background-position-y: 80%;
-    }
-  }
-
-  .instructions {
-    line-height: 1.6;
-    margin: 1rem 0;
-    background: #4f39fa;
-    padding: 1rem;
-    border-radius: 0.4rem;
-    color: var(--color-bg);
-  }
-
-  .instructions code {
-    font-size: 0.875em;
-    border: 0.1em solid var(--color-border);
-    border-radius: 4px;
-    padding: 0.15em 0.25em;
-  }
-
-  .link-card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-    gap: 1rem;
-    padding: 0;
-  }
-</style>
