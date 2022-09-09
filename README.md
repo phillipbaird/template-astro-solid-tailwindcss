@@ -1,11 +1,11 @@
 # Astro + Solid-JS + TailwindCSS Template
 
 An [Astro](https://astro.build) project template with the following additions:
+
 - Solid
 - TailwindCSS
 - Prettier with Astro and Tailwind plug-ins.
 - ESLint
-
 
 ## 🧞 Commands
 
