@@ -9,7 +9,7 @@ module.exports = {
   astroAllowShorthand: true,
   overrides: [
     {
-      files: 'src/**/*.{astro,tsx,ts}',
+      files: '*.astro',
       options: {
         parser: 'astro',
       },
