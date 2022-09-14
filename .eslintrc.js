@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-undef
 module.exports = {
   root: true,
   parser: '@typescript-eslint/parser',
@@ -5,7 +6,7 @@ module.exports = {
   overrides: [
     {
       // Define the configuration for `.astro` file.
-      files: ['src/**/*.{astro,tsx,ts}'],
+      files: ['*.astro'],
       // Allows Astro components to be parsed.
       parser: 'astro-eslint-parser',
       // Parse the script in `.astro` as TypeScript by adding the following configuration.
@@ -17,6 +18,7 @@ module.exports = {
       rules: {
         // override/add rules settings here, such as:
         // "astro/no-set-html-directive": "error"
+        "tailwindcss/migration-from-tailwind-2": "off"
       },
     },
     // ...
