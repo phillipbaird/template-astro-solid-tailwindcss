@@ -1,8 +1,11 @@
 // eslint-disable-next-line no-undef
 module.exports = {
+  "env": {
+    "browser": true
+  },
   root: true,
   parser: '@typescript-eslint/parser',
-  extends: ['eslint:recommended', 'plugin:astro/recommended', 'plugin:tailwindcss/recommended'],
+  extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'plugin:astro/recommended', 'plugin:tailwindcss/recommended'],
   overrides: [
     {
       // Define the configuration for `.astro` file.
